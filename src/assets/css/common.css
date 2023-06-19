@@ -1,0 +1,50 @@
+:root {
+  --white-txt: #FFFFFF;
+  --white-bg: #FFFFFF;
+  --black-txt: #000000;
+  --black-bg: #000000;
+  --beige-txt: #c4b59d;
+  --beige-bg: #c4b59d;
+  --gray-blue-txt: #5e939c;
+  --gray-blue-bg: #5e939c;
+  --gray-green-txt: #2b5a5c;
+  --gray-green-bg: #2b5a5c;
+  --orange-txt: #dc7c48;
+  --orange-bg: #dc7c48;
+}
+
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  background-color: var(--gray-green-bg);
+  color: var(--white-txt);
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1630px;
+  }
+}
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  flex: 1;
+}
