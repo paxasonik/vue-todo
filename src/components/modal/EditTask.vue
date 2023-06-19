@@ -4,33 +4,43 @@ import Modal from "../UI/Modal.vue";
 import FormInput from "../UI/FormInput.vue";
 
 export default defineComponent({
-  name: "AddTask",
+  name: "EditTask",
   components: {
     FormInput,
     Modal
+  },
+  props: {
+    task: {
+      type: String,
+      default: '',
+    },
+    index: {
+      type: Number,
+      default: 0,
+    }
   },
   data() {
     return {
       isModalVisible: false,
       nameTask: '',
-      NameModal: "Добавить задачу",
+      NameModal: "Редактировать задачу",
     }
   },
   computed: {
     isCompletedForm () {
-      return !this.nameTask
+      return !this.nameTask || this.nameTask === this.task
     }
   },
   methods: {
     showModal() {
+      this.nameTask = this.task
       this.isModalVisible = true
     },
     closeModal() {
-      this.nameTask = ''
       this.isModalVisible = false;
     },
-    addTask() {
-      this.$store.commit('task/ADD_TASK', this.nameTask);
+    editTask() {
+      this.$store.commit('task/EDIT_TASK', [this.index, this.nameTask]);
       this.closeModal()
     }
   },
@@ -38,25 +48,25 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="add-task">
+  <div class="edit-task">
     <button class="btn" @click="showModal">
-      Добавить
+      Редактировать
     </button>
     <Modal
       v-show="isModalVisible"
       :titleModal="NameModal"
       @closeModal="closeModal"
     >
-      <div class="add-task__content modal__content">
+      <div class="edit-task__content modal__content">
         <FormInput
           type="text"
           placeholder="Название задачи"
           :value.sync="nameTask"
         />
       </div>
-      <div class="add-task__footer modal__footer">
-        <button class="btn" @click="addTask" :disabled="isCompletedForm">
-          Сохранить
+      <div class="edit-task__footer modal__footer">
+        <button class="btn" @click="editTask" :disabled="isCompletedForm">
+          Редактировать
         </button>
       </div>
     </Modal>

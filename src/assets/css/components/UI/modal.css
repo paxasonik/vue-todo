@@ -36,3 +36,8 @@
 .modal__header-close:hover {
   opacity: .5;
 }
+
+.modal__content,
+.modal__footer {
+  margin-top: 30px;
+}
