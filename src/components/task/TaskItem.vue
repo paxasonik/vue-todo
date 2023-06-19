@@ -17,7 +17,7 @@ export default defineComponent({
   },
   methods: {
     deleteTask() {
-      this.$store.commit('task/DELETE_TASK', this.task);
+      this.$store.commit('task/DELETE_TASK', this.index);
     },
   }
 })
@@ -28,7 +28,7 @@ export default defineComponent({
     <span>
       {{task}}
     </span>
-    <div class="">
+    <div class="task__item-row">
       <button class="btn" @click="deleteTask">
         Удалить
       </button>
