@@ -20,7 +20,7 @@ export default defineComponent({
             </router-link>
           </li>
           <li class="header__item">
-            <router-link :to="{name: 'Main'}">
+            <router-link :to="{name: 'Tasks'}">
               Список задач
             </router-link>
           </li>

@@ -9,6 +9,11 @@ export default new Router({
       path: '/',
       name: 'Main',
       component: () => import("@/pages/Main"),
+    },
+    {
+      path: '/tasks',
+      name: 'Tasks',
+      component: () => import("@/pages/Tasks"),
     }
   ]
 })

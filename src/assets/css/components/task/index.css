@@ -1,0 +1,28 @@
+.task__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task__list {
+  margin-top: 40px;
+}
+.task__list-empty {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.task__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.task__item:not(:last-child) {
+  border-bottom: 1px solid var(--orange-bg);
+}
+.task__item-row {
+  display: flex;
+  gap: 10px;
+}

@@ -48,3 +48,22 @@ body {
   padding-bottom: 60px;
   flex: 1;
 }
+
+.btn {
+  background-color: var(--gray-blue-bg);
+  border: 2px solid var(--gray-blue-bg);
+  padding: 8px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--white-txt);
+  transition: all .3s ease-in-out;
+}
+.btn:hover:not(:disabled) {
+  background-color: var(--white-bg);
+  color: var(--orange-txt);
+}
+
+:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
