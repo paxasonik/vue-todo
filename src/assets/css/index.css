@@ -4,3 +4,10 @@
 @import "common.css";
 
 @import "components/header.css";
+
+@import "components/UI/form.css";
+@import "components/UI/modal.css";
+
+@import "components/modal/add_task.css";
+
+@import "components/task/index.css";
