@@ -2,7 +2,7 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: "Main",
+  name: "Tasks"
 })
 </script>
 
@@ -10,7 +10,7 @@ export default defineComponent({
   <section class="content">
     <div class="container">
       <h1>
-        Главная страница
+        Список задач
       </h1>
     </div>
   </section>
