@@ -2,6 +2,7 @@
 import {defineComponent} from 'vue'
 import Modal from "../UI/Modal.vue";
 import FormInput from "../UI/FormInput.vue";
+import {NameModal} from "./constants";
 
 export default defineComponent({
   name: "AddTask",
@@ -13,7 +14,7 @@ export default defineComponent({
     return {
       isModalVisible: false,
       nameTask: '',
-      NameModal: "Добавить задачу",
+      NameModal,
     }
   },
   computed: {
@@ -44,7 +45,7 @@ export default defineComponent({
     </button>
     <Modal
       v-show="isModalVisible"
-      :titleModal="NameModal"
+      :titleModal="NameModal.ADD"
       @closeModal="closeModal"
     >
       <div class="add-task__content modal__content">

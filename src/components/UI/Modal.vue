@@ -1,17 +1,18 @@
 <script>
 import {defineComponent} from 'vue'
+import {Emit, DefaultProps} from "./constants";
 
 export default defineComponent({
   name: "Modal",
   props: {
     titleModal: {
       type: String,
-      default: 'Модальное окно',
+      default: DefaultProps.TITLE_MODAL,
     },
   },
   methods: {
     closeModal() {
-      this.$emit('closeModal');
+      this.$emit(Emit.CLOSE_MODAL);
     },
   },
 })

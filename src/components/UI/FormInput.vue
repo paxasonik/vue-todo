@@ -1,5 +1,6 @@
 <script>
 import {defineComponent} from 'vue'
+import {Emit, DefaultProps} from "./constants";
 
 export default defineComponent({
   name: "FormInput",
@@ -10,7 +11,7 @@ export default defineComponent({
     },
     type: {
       type: String,
-      default: 'text'
+      default: DefaultProps.TEXT
     },
     placeholder: {
       type: String,
@@ -23,7 +24,7 @@ export default defineComponent({
         return this.value;
       },
       set(value) {
-        this.$emit('update:value', value);
+        this.$emit(Emit.UPDATE_VALUE, value);
       }
     }
   },

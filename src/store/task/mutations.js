@@ -1,17 +1,19 @@
+import {STORE_NAME} from "./constants";
+
 const SET_TASK = (state, tasks) => {
   state.tasks = tasks;
 };
 const ADD_TASK = (state, task) => {
   state.tasks.push(task);
-  localStorage.setItem('taskList', JSON.stringify(state.tasks));
+  localStorage.setItem(STORE_NAME, JSON.stringify(state.tasks));
 };
 const DELETE_TASK = (state, index) => {
   state.tasks.splice(index, 1);
-  localStorage.setItem('taskList', JSON.stringify(state.tasks));
+  localStorage.setItem(STORE_NAME, JSON.stringify(state.tasks));
 };
 const EDIT_TASK = (state, [index, task]) => {
   state.tasks.splice(index, 1, task);
-  localStorage.setItem('taskList', JSON.stringify(state.tasks));
+  localStorage.setItem(STORE_NAME, JSON.stringify(state.tasks));
 };
 
 export default {
