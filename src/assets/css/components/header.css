@@ -1,0 +1,30 @@
+.header {
+  padding: 20px 0;
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--orange-txt);
+}
+.header__logo:hover {
+  color: var(--gray-blue-txt);
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header__item > a:hover {
+  color: var(--gray-blue-txt);
+}
